@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Richard Lee"]
   spec.email         = ["dlackty@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Paranoid text spacing in Ruby}
+  spec.description   = %q{Insert a white space between full-width characters (Chinese, Japanese, etc.) and half-width alphanumerics for good readability.}
+  spec.homepage      = "https://github.com/dlackty/pangu.rb"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
