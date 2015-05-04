@@ -1,39 +1,35 @@
-# Pangu
+# pangu.rb
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pangu`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Build Status](https://travis-ci.org/dlackty/pangu.rb.svg?branch=master)](https://travis-ci.org/dlackty/pangu.rb)
+[![Coverage Status](https://coveralls.io/repos/dlackty/pangu.rb/badge.svg)](https://coveralls.io/r/dlackty/pangu.rb)
 
-TODO: Delete this and the text above, and describe your gem
+Paranoid text spacing for good readability, to automatically insert whitespace between CJK (Chinese, Japanese, Korean), half-width English, digit and symbol characters.
+
+* JavaScript version: [pangu.js](https://github.com/vinta/paranoid-auto-spacing)
+* Node.js version: [pangu.node](https://github.com/huei90/pangu.node)
+* Python version: [pangu.py](https://github.com/vinta/pangu.py)
+* Java version: [pangu.java](https://github.com/vinta/pangu.java)
+
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'pangu'
+```bash
+gem install pangu
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install pangu
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require "pangu"
 
-## Development
+Pangu.spacing("請問Jackie的鼻子有幾個？123個！")
+=> "請問 Jackie 的鼻子有幾個？123 個！"
+Pangu.spacing("主要成份：眼鏡95%、水3%、垃圾2%。")                                                                                                                                        
+=> "主要成份：眼鏡 95%、水 3%、垃圾 2%。"
+Pangu.spacing("新阿姆斯特朗炫風噴射阿姆斯特朗砲")
+=> "新阿姆斯特朗炫風噴射阿姆斯特朗砲"
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+## License
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/pangu/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Copyright (c) 2015 Richard Lee. See LICENSE.txt for details.
